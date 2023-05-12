@@ -22,7 +22,6 @@ public class UsaCongreso {
 
     // Creo una lista de congresos.
     static LinkedList<Congreso> losCongresos = new LinkedList<>();
-   
 
     //---> MetodoPrincipal
     public static void main(String[] args) {
@@ -149,7 +148,7 @@ public class UsaCongreso {
 
             if (losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size() == 0) {//entra la clase Congreso que estoy buscando y de hay entra al LinkedList y toma el valor del tamaño y la comparo con 0.
                 numero = 1;
-             
+
             } else {
                 numero = losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).calcularNumeroInscripcion(); //deberia ir un metodo.
             }
@@ -227,14 +226,12 @@ public class UsaCongreso {
 
     public static void eliminarCongreso() {
         String identificadorCongreso = JOptionPane.showInputDialog("Ingresar el identificador que quiere eliminar eje:(2023-04-23-0001)");
-        int auxPosicion = 0;
         for (Congreso elem : losCongresos) {
             if (identificadorCongreso.equals(elem.getIdentificador())) {
                 losCongresos.remove(elem);
                 JOptionPane.showMessageDialog(null, "Se elimino correctamente");
                 break;
             }
-
         }
     }
 
@@ -360,8 +357,6 @@ public class UsaCongreso {
         });
         JOptionPane.showMessageDialog(null, "los congresos " + losCongresos.toString());
     }//Metodo de prueba
-
-   
 
     public static int encontrarPosicionCongreso(String identificadorCongreso) {
         int aux = -1;

@@ -13,14 +13,14 @@ import java.util.LinkedList;
  *
  * @author fabian_esteban.lopez
  */
-public class Page3 extends javax.swing.JPanel {
+public class Page4 extends javax.swing.JPanel {
 
     /**
      * Creates new form Page1
      */
     LinkedList<String> deportes = new LinkedList<>();
 
-    public Page3() {
+    public Page4() {
         initComponents();
 
     }

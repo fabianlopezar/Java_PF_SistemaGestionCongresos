@@ -104,6 +104,11 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         jButton3.setText("ELIMINAR CONGRESO");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("CONSULTAR UN CONGRESO");
 
@@ -191,9 +196,15 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_b1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       Page2 p2 = new Page2();
+        Page2 p2 = new Page2();
         ShowPanel(p2);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        Page3 p3 = new Page3();
+        ShowPanel(p3);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
