@@ -7,7 +7,6 @@ package Vista;
 
 import Modelo.Congreso;
 import static Vista.UsaCongreso.losCongresos;
-import java.util.LinkedList;
 
 /**
  *
@@ -18,8 +17,6 @@ public class Page3 extends javax.swing.JPanel {
     /**
      * Creates new form Page1
      */
-    LinkedList<String> deportes = new LinkedList<>();
-
     public Page3() {
         initComponents();
 

@@ -39,7 +39,7 @@ public class UsaCongreso {
         menu += "5) Generar REPORTE lista ordenada ascendente de congresos por fecha." + "\n";
         menu += "6) ALMACENAR datos en un archivo texto." + "\n";
         menu += "7) RECUPERAR datos desde un archivo texto." + "\n";
-        menu += "8) Mostrar los Todos los Congresos" + "\n"; //METODO DE PRUEBA (ELIMINARLO DESPUES)
+        menu += "8) Mostrar Todos los Congresos" + "\n"; //METODO DE PRUEBA (ELIMINARLO DESPUES)
         menu += "9) SALIR " + "\n";
 
         int opcion;

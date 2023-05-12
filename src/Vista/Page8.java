@@ -12,12 +12,12 @@ import static Vista.UsaCongreso.losCongresos;
  *
  * @author fabian_esteban.lopez
  */
-public class Page4 extends javax.swing.JPanel {
+public class Page8 extends javax.swing.JPanel {
 
     /**
      * Creates new form Page1
      */
-    public Page4() {
+    public Page8() {
         initComponents();
 
     }
@@ -33,8 +33,6 @@ public class Page4 extends javax.swing.JPanel {
 
         bg = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        idtx = new javax.swing.JTextField();
         buscar = new javax.swing.JButton();
         existe = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -44,10 +42,7 @@ public class Page4 extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("Consultar un Congreso");
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Ingrese el identificador del congreso deseado");
+        jLabel1.setText("Mostrar Todos Los Congresos");
 
         buscar.setText("BUSCAR");
         buscar.addActionListener(new java.awt.event.ActionListener() {
@@ -72,11 +67,7 @@ public class Page4 extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(bgLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(idtx, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(426, 426, 426)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(buscar))
@@ -102,8 +93,6 @@ public class Page4 extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(idtx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buscar)
                     .addComponent(existe, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
@@ -117,50 +106,14 @@ public class Page4 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
-        String identificadorCongreso = idtx.getText();
-        if (existeCongreso(identificadorCongreso)) {
-            existe.setText("el identificador digitado existe");
-            int numero = 0;
-            if (losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size() == 0) {//entra la clase Congreso que estoy buscando y de hay entra al LinkedList y toma el valor del tamaño y la comparo con 0.
-                consultarUnCongreso(identificadorCongreso);
-            }
-            //String fechaYHoraInscripcionAux =
-        } else {//el numero digitado no existe.
-            existe.setText("El identificador digitado no existe.");
-        }
+        mostrarLosCongresos();
     }//GEN-LAST:event_buscarActionPerformed
-
-    public boolean existeCongreso(String identificadorCongreso) {
-        boolean existeCongreso = false;
-        for (Congreso elem : losCongresos) {
-            if (elem.getIdentificador().equals(identificadorCongreso)) {
-                existeCongreso = true;
-
-            }
+    public void mostrarLosCongresos() {
+        String reporte = "REPORTE CONGRESOS POR IDENTIFICADOR Y NOMBRE";
+        for (int i = 0; i < losCongresos.size(); i++) {
+            reporte += "\nidentificador Congreso: " + losCongresos.get(i).getIdentificador() + "    Nombre congreso: " + losCongresos.get(i).getNombre();
         }
-        return existeCongreso;
-    }
-
-    public static int encontrarPosicionCongreso(String identificadorCongreso) {
-        int aux = -1;
-
-        for (Congreso elem : losCongresos) {
-            if (elem.getIdentificador().equals(identificadorCongreso)) {
-                aux++;
-                break;
-            }
-        }
-        return aux;
-    }
-
-    public void consultarUnCongreso(String identificador) {
-        String listado = "INFORME DETALLADO DE UN CONGRESO\n";
-        for (Congreso elem : losCongresos) {
-            if (elem.getIdentificador().equals(identificador)) {
-                listado += elem.toString() + "\n";
-            }
-        }
-        resultado.setText(listado);
+        resultado.setText(reporte);
     }
 
 
@@ -168,9 +121,7 @@ public class Page4 extends javax.swing.JPanel {
     private javax.swing.JPanel bg;
     private javax.swing.JButton buscar;
     private javax.swing.JLabel existe;
-    private javax.swing.JTextField idtx;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea resultado;
