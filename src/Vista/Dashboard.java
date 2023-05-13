@@ -117,7 +117,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("CONSULTAR CONGRESOS ORDENADOS  FECHA");
+        jButton5.setText("ORDENADOS  FECHA");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -178,7 +178,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jButton9)
                     .addComponent(jButton2)
                     .addComponent(b1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addComponent(contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -189,21 +189,23 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addGap(24, 24, 24)
-                .addComponent(jButton3)
-                .addGap(24, 24, 24)
-                .addComponent(jButton4)
-                .addGap(24, 24, 24)
-                .addComponent(jButton5)
-                .addGap(24, 24, 24)
-                .addComponent(jButton6)
-                .addGap(24, 24, 24)
-                .addComponent(jButton7)
-                .addGap(24, 24, 24)
-                .addComponent(jButton8)
-                .addGap(24, 24, 24)
-                .addComponent(jButton9)
-                .addContainerGap(268, Short.MAX_VALUE))
-            .addComponent(contenido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton4)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton5)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton6)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton7)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton8)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton9)
+                        .addContainerGap(268, Short.MAX_VALUE))
+                    .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

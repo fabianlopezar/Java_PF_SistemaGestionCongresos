@@ -145,7 +145,7 @@ public class UsaCongreso {
             JOptionPane.showMessageDialog(null, "Datos de la inscripcion.");
             JOptionPane.showMessageDialog(null, "este es el tamaño de la coleccion de susInscripciones: " + losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size());
             int numero = 0;
-
+            //metodo para calcular el numero de la inscripcion
             if (losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size() == 0) {//entra la clase Congreso que estoy buscando y de hay entra al LinkedList y toma el valor del tamaño y la comparo con 0.
                 numero = 1;
 
@@ -359,15 +359,28 @@ public class UsaCongreso {
     }//Metodo de prueba
 
     public static int encontrarPosicionCongreso(String identificadorCongreso) {
-        int aux = -1;
-
+        int posicion = -1;
         for (Congreso elem : losCongresos) {
+            posicion++;
             if (elem.getIdentificador().equals(identificadorCongreso)) {
-                aux++;
                 break;
             }
         }
-        return aux;
+        return posicion;
     }
 
+    /*public static int encontrarPosicionCongresoDebug() {
+        String auxIdentificador = JOptionPane.showInputDialog("ingrese el identificador:");
+        int posicion = -1;// La variable se declara en -1 ya que la coleccion empieza en 0.
+        for (Congreso elem : losCongresos) {
+            posicion++;// 
+            if (elem.getIdentificador().equals(auxIdentificador)) {
+                //JOptionPane.showMessageDialog(null, "Deberia funcionar" + elem.toString());
+                break;
+            }
+        }
+        //JOptionPane.showMessageDialog(null, "ESTA ES LA POSICION DEL CONGRESO --> " + aux);
+        return posicion;
+    }
+     */
 }//fin clase

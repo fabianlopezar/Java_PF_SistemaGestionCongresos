@@ -60,6 +60,7 @@ public class Page4 extends javax.swing.JPanel {
 
         resultado.setColumns(20);
         resultado.setRows(5);
+        resultado.setEnabled(false);
         jScrollPane1.setViewportView(resultado);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N

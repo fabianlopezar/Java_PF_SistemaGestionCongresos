@@ -42,6 +42,7 @@ public class Page6 extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        bg.setEnabled(false);
         bg.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -61,27 +62,23 @@ public class Page6 extends javax.swing.JPanel {
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bgLayout.createSequentialGroup()
-                        .addGap(426, 426, 426)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(buscar)))
-                    .addGroup(bgLayout.createSequentialGroup()
-                        .addGap(337, 337, 337)
-                        .addComponent(auxiliar, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(277, Short.MAX_VALUE))
+                    .addComponent(jLabel1)
+                    .addComponent(buscar)
+                    .addComponent(auxiliar, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(676, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(buscar)
                 .addGap(172, 172, 172)
                 .addComponent(auxiliar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap(305, Short.MAX_VALUE))
         );
 
         add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1100, 600));
@@ -110,7 +107,8 @@ public class Page6 extends javax.swing.JPanel {
                 }
                 salida.println(linea);
             }//Fin for
-            auxiliar.setText("Exito, almacenado correctamente.");
+    
+              auxiliar.setText("Exito: almacenado correctamente.");
             salida.close();
             //Procesando cortes para agregar a la lista linea del archivo.
 
