@@ -364,13 +364,13 @@ public class Page2 extends javax.swing.JPanel {
         //cada vez que yo le haga click a una opcion se viene a ejecutar esta linea.
         //1) En esta linea debo añadir un deporte a mi LinkedList deportes.
         String deporteSelect = (String) opciones.getSelectedItem();
-        if (deporteSelect.equals("Futbol")) {
+        if (deporteSelect.equals("Futbol") && !deportes.contains("Futbol")) {
             deportes.add("Futbol");
         }
-        if (deporteSelect.equals("Pin-Pon")) {
+        if (deporteSelect.equals("Pin-Pon") && !deportes.contains("Pin-Pon")) {
             deportes.add("Pin-Pon");
         }
-        if (deporteSelect.equals("Basketball")) {
+        if (deporteSelect.equals("Basketball") && !deportes.contains("Basketball")) {
             deportes.add("Basketball");
         }
 
@@ -405,6 +405,7 @@ public class Page2 extends javax.swing.JPanel {
         // Creando Egresado
         Egresado suEgresado = new Egresado(tipoIdentificacion, numeroIdentificacion, nombreCompleto, numeroTelefonico, email, deportes, ultimoNFA, esEmpresario);
         Inscripcion nuevaInscripcion = new Inscripcion(numero, fechaYHoraInscripcion, estado, suEgresado);
+        agregarInscripcionCongreso(IdentificadorCongreso, nuevaInscripcion);
         resultado.setText("" + nuevaInscripcion.toString());
         deportes.clear();
         /*
@@ -432,6 +433,16 @@ public class Page2 extends javax.swing.JPanel {
             }
         }
         return posicion;
+    }
+
+    public static void agregarInscripcionCongreso(String numeroIdentificadorCongreso, Inscripcion nuevaInscripcion) {
+
+        for (Congreso elem : losCongresos) {
+            if (elem.getIdentificador().equals(numeroIdentificadorCongreso)) {
+                elem.agregarInscripcion(nuevaInscripcion);
+            }
+        }
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;

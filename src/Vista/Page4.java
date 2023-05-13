@@ -120,14 +120,14 @@ public class Page4 extends javax.swing.JPanel {
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         String identificadorCongreso = idtx.getText();
         if (existeCongreso(identificadorCongreso)) {
-            existe.setText("el identificador digitado existe");
+            existe.setText("EXISTE");
             int numero = 0;
-            if (losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size() == 0) {//entra la clase Congreso que estoy buscando y de hay entra al LinkedList y toma el valor del tamaño y la comparo con 0.
+            //if (losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size() == 0) {//entra la clase Congreso que estoy buscando y de hay entra al LinkedList y toma el valor del tamaño y la comparo con 0.
                 consultarUnCongreso(identificadorCongreso);
-            }
+            //}
             //String fechaYHoraInscripcionAux =
         } else {//el numero digitado no existe.
-            existe.setText("El identificador digitado no existe.");
+            existe.setText("El identificador digitado NO existe.");
         }
     }//GEN-LAST:event_buscarActionPerformed
 
