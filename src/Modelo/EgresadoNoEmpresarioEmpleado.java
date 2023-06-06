@@ -1,4 +1,4 @@
-//Fabian esteban lopez arias
+//Fabian Esteban Lopez Arias 2216110 y Juan Felipe Plata Barbosa 2221109
 package Modelo;
 
 import java.time.LocalDate;

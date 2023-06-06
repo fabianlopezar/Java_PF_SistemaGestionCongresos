@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Fabian Esteban Lopez Arias 2216110 y Juan Felipe Plata Barbosa 2221109
 package Vista;
 
 import Modelo.Congreso;
@@ -87,7 +83,7 @@ public class Page7 extends javax.swing.JPanel {
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         losCongresos.clear();
         recuperarDesdeArchivoTexto();
-        auxiliar.setText("Exito, almacenado correctamente.");
+        auxiliar.setText("Exito, datos recuperados correctamente.");
     }//GEN-LAST:event_buscarActionPerformed
     public static void recuperarDesdeArchivoTexto() {
         try {

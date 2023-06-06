@@ -1,4 +1,4 @@
-//* @author fabian_esteban.lopez
+//Fabian Esteban Lopez Arias 2216110 y Juan Felipe Plata Barbosa 2221109
 package Modelo;
 
 import java.time.LocalDateTime;
@@ -87,7 +87,7 @@ public class Congreso {
     public LinkedList<Inscripcion> getSusInscripciones() {
         return susInscripciones;
     }
-
+    
     public void setSusInscripciones(LinkedList<Inscripcion> susInscripciones) {
         this.susInscripciones = susInscripciones;
     }
@@ -116,6 +116,4 @@ public class Congreso {
         }
         return listado;
     }
-
-  
 }

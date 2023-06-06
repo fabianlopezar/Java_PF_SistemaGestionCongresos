@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Fabian Esteban Lopez Arias 2216110 y Juan Felipe Plata Barbosa 2221109
 package Vista;
 
 import Modelo.Congreso;
@@ -100,7 +96,7 @@ public class Page3 extends javax.swing.JPanel {
             int numero = 0;
             if (losCongresos.get(encontrarPosicionCongreso(identificadorCongreso)).getSusInscripciones().size() == 0) {//entra la clase Congreso que estoy buscando y de hay entra al LinkedList y toma el valor del tamaño y la comparo con 0.
                 eliminarCongreso(identificadorCongreso);
-                existe.setText("EXITO, se elimino el congreso.");
+              //  existe.setText("EXITO, se elimino el congreso.");
             }
             //String fechaYHoraInscripcionAux =
         } else {//el numero digitado no existe.
@@ -133,7 +129,7 @@ public class Page3 extends javax.swing.JPanel {
 
     public void eliminarCongreso(String identificadorCongreso) {
         for (Congreso elem : losCongresos) {
-            if (identificadorCongreso.equals(elem.getIdentificador())) {
+            if (identificadorCongreso.equals(elem.getIdentificador())) {                   
                 losCongresos.remove(elem);
                 break;
             }

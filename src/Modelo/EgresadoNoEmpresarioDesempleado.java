@@ -1,4 +1,4 @@
-//Fabian Esteban Lopez Arias
+//Fabian Esteban Lopez Arias 2216110 y Juan Felipe Plata Barbosa 2221109
 package Modelo;
 
 import java.util.LinkedList;
